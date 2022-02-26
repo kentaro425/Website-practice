@@ -10,114 +10,35 @@ header {
   background-color: #ec715f;
 }
 
-/* img{width:100%;} */
- 
-/*ロゴの大きさを調整*/
-/* #logo img { */
-  max-width:50%;
+nav {
+  width: 1024px;
+  display: flex;
+  margin: auto;
 }
- 
-nav{
- width: 100%;
- height: 70px;
- position: relative;
- background: #F6F6F6;
-}
- 
-.drawer{
- display: flex;
- flex-direction: row;
- align-items: center;
- justify-content: space-between;
- position: relative;
- height: 70px;
- padding: 0 1em;
-}
- 
-/*ナビゲーション部分*/
- 
-.menu ul li a {
-display:block;
-  font-weight:bold;
-padding: 2em;
-border-bottom: 1px dotted #CCC;
-  color:#333;
-  text-decoration:none;
-}
- 
- 
-.menu ul li a:hover
-{background-color:rgba(0,0,0,0.5);
-color:orange;}
- 
- 
-.menu{
- 
-  text-align:center;
-  background-color:rgba(255,255,255,0.5);
-  transition: 0.5s ease;/*滑らかに表示*/
-  -webkit-transform: translateX(100%);/*画面より100%外へ押し出し非表示にさせる*/
- 
-/*  transform: translateX(-100%);/*右から出す場合は、マイナス100%としてください*/
- 
-}
- 
-/*OPEN時の動き*/
-.menu.open {
- -webkit-transform: translateX(0%);
- transform: translateX(0%);/*メニューを元の位置へ戻す*/
- 
-}
- 
-/*トグルボタンのスタイルを指定*/
-.Toggle {
-    display: block;
-    position: fixed;    /* bodyに対しての絶対位置指定 */
-    width: 42px;
-    height: 42px;
-    cursor: pointer;
-    z-index: 3;
-  right:15px;
-}
- 
-.Toggle span {
-    display: block;
-    position: absolute;
-    width: 50px;
-    border-bottom: solid 4px #333;
-    -webkit-transition: .35s ease-in-out;	/*変化の速度を指定*/
-    -moz-transition: .35s ease-in-out;		/*変化の速度を指定*/
-    transition: .35s ease-in-out;			/*変化の速度を指定*/
- 
-}
- /*各ボーダー少しずつずらす*/
-.Toggle span:nth-child(1) {
-    top:5px;
-}
- .Toggle span:nth-child(2) {
-    top: 18px;
-}
- .Toggle span:nth-child(3) {
-    top: 32px;
-}
-.Toggle.active span:nth-child(1) {
-    top: 18px;
-/* 1番目のspanをマイナス45度に */
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-}
- 
-/* 2番目と3番目のspanを45度に */
-.Toggle.active span:nth-child(2),
-.Toggle.active span:nth-child(3) {
-    top: 18px;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
- 
 
+ul {
+  display: flex;
+  list-style: none;
+}
+
+.menu {
+  margin-left: auto;
+}
+
+.logo-image {
+  height: 70px;
+}
+
+li {
+  line-height: 70px;
+  margin: 0 30px;
+}
+
+.nav-item {
+  font-size: 16px;
+  color: #fafafa;
+  text-decoration: none;
+}
 
 .main-visual {
   height: 650px;
@@ -330,6 +251,32 @@ footer {
     margin: 0 auto;
   }
 
+  .logo-image {
+    height: 50px;
+  }
+
+  nav {
+    width: 90%;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .hamburger {
+    width: 40px;
+    height: 40px;
+    border: oldlace 1px solid;
+    margin-left: auto;
+  }
+
+  .hamburger-border {
+    width: 30px;
+    height: 1px;
+    margin: 8px auto;
+    background-color: oldlace;
+  }
+
   .main-visual {
     width: 90%;
     margin: 0 auto;
@@ -352,22 +299,22 @@ footer {
   .portfolio-item {
     width: 90%;
   }
-  
+
   .portfolio-item:nth-child(2) {
     display: block;
   }
-  
+
   .portfolio-image {
     width: 300px;
     height: 250px;
     background-size: cover;
     margin-right: 0px;
   }
-  
+
   .portfolio-image:nth-child(2n-1) {
     display: none;
   }
-  
+
   .feature {
     width: 90%;
     margin: 0 auto;
@@ -376,23 +323,23 @@ footer {
   .feature-item {
     width: 90%;
   }
-  
+
   .feature-item:nth-child(2) {
     display: block;
   }
-  
+
   .feature-box {
     margin: 0 auto;
   }
-  
+
   .feature-box:nth-child(2) {
     margin: 0 auto;
   }
-  
+
   .icon-text {
     margin-bottom: 10px;
   }
-  
+
   .profile {
     width: 90%;
     margin: 0 auto;
@@ -401,28 +348,28 @@ footer {
   .profile-item {
     width: 90%;
   }
-  
+
   .profile-item:nth-child(2) {
     display: block;
   }
-  
+
   .profile-box {
     width: 90%;
     margin: 0 auto;
   }
-  
+
   .profile-box:nth-child(2) {
     text-align: center;
   }
-  
+
   .profile-box-head {
     margin-top: 20px;
   }
-  
+
   .profile-box-text {
     margin-bottom: 0px;
   }
-  
+
   .contact {
     width: 90%;
     margin: 0 auto;
@@ -432,25 +379,25 @@ footer {
     width: 90%;
     margin: 0 auto;
   }
-  
+
   .contact-item:nth-child(2) {
     display: block;
   }
-  
+
   .contact-box {
     width: 90%;
     margin: 0 auto;
     text-align: center;
   }
-  
+
   .contact-box-content {
     width: 90%;
   }
-  
+
   .contact-icon {
     margin-right: 8px;
   }
-  
+
   .contact-icon:nth-child(3) {
     margin-right: 0;
   }
@@ -462,64 +409,4 @@ footer {
 }
 
 @media screen and (min-width: 767px) {
- 
-  /*ロゴの大きさを調整*/
-  #logo img{
-    height: 70px;
-  }	
-    
-  nav{
-    width: 1024px;
-    display: flex;
-    margin: auto;
-  }
-   
-  .Toggle{
-   display: none;
-  }
-  .menu{
-  width: 100%;
-  
-  background-color: transparent;
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-  
-  }
-  .menu ul{
-   height: 70px;
-   display: flex;
-   margin-left: auto;
-   align-items: center;
-   list-style: none;
-  }
-  .menu ul li a{
-  margin: 0 30px;
-   border-bottom: none;
-   color: #fafafa;
-  }
-  .menu ul li a:hover{
-  background-color:transparent;
-  }
 }
-
-/* nav {
-  width: 1024px;
-  display: flex;
-  margin: auto;
-}
-
-
-.logo-image {
-  height: 70px;
-}
-
-li {
-  line-height: 70px;
-  margin: 0 30px;
-}
-
-.nav-item {
-  font-size: 16px;
-  color: #fafafa;
-  text-decoration: none;
-} */
