@@ -4,32 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/55bb3a9751.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
     <header>
+        <script src="script.js"></script>
         <nav>
-            <ul>
-                <li>
-                    <img class="logo" src="img/logo.png">
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <a class="nav-item" href="">Portfolio</a>
-                </li>
-                <li>
-                    <a class="nav-item" href="">Feature</a>
-                </li>
-                <li>
-                    <a class="nav-item" href="">Profile</a>
-                </li>
-                <li>
-                    <a class="nav-item" href="">Contact</a>
-                </li>
-            </ul>
+            <div class="drawer">
+                <!--- いわゆるロゴ ------>
+                <div id="logo">
+                    <a href="#"><img class="logo-image" src="img/logo.png"></a>
+                </div>
+                <div class="Toggle">
+                　　<span></span>
+                　　<span></span>
+                　　<span></span>
+                </div>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a class="nav-item" href="">Portfolio</a>
+                    </li>
+                    <li>
+                        <a class="nav-item" href="">Feature</a>
+                    </li>
+                    <li>
+                        <a class="nav-item" href="">Profile</a>
+                    </li>
+                    <li>
+                        <a class="nav-item" href="">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
